@@ -1,24 +1,48 @@
 .primary-nav {
+padding-top: 10px;
+
+@mixin atMedium {
+    padding-top: 0;
+}
 
     &--pull-right {
-        float: right;
+        @mixin atMedium {
+            float: right;
+        }
     }
-
     ul {
         margin: 0;
         padding: 0;
         @mixin clearfix;
     }
-
     li {
         list-style: none;
-        float: left;
-        padding: 12px 20px 0 0;
+        display: inline-block;
+        /*allow to be horizontally centered */
+        padding: 0 20px 0 0;
+        @mixin atMedium {
+            float: left;
+            display: block;
+        }
     }
-
+    li:last-child {
+        padding-right: 0;
+        @mixin atMedium {
+            padding-right: 20px;
+        }
+    }
     a {
         color: #ffffff;
         text-decoration: none;
         font-weight: 300;
+        display: block;
+        padding: 5px 8px;
+        font-size: .8rem;
+        background-color: rgba($mainBlue, .5);
+        @mixin atMedium {
+            font-size: 1rem;
+            padding: 12px 0;
+            background-color: transparent;
+        }
     }
 }
