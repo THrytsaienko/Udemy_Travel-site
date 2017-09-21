@@ -10,9 +10,8 @@
     @mixin atMedium {
         position: fixed;
         background-color: rgba(47, 85, 114, .3);
-
         &--dark {
-                background-color: rgba(23, 51, 72, .85);
+            background-color: rgba(23, 51, 72, .85);
         }
     }
     &__btn-container {
@@ -71,9 +70,9 @@
             opacity: 0;
             transform: scaleX(0);
         }
-         &::after {
-             transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-         }
+        &::after {
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+        }
     }
     &__logo {
         top: 0;
@@ -87,9 +86,8 @@
         @mixin atMedium {
             left: auto;
             transform: translateX(0);
-
             .site-header--dark & {
-                transform: scale(.57);
+                transform: scale(.56);
             }
         }
     }
